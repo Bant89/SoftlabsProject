@@ -4,7 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Project.Views.VideoPage">
+             x:Class="Project.Views.VideoPage"
+             xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.forms"
+             mvvm:ViewModelLocator.AutowireViewModel="True">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Video Page!"
