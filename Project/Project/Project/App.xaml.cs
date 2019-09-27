@@ -16,12 +16,14 @@ namespace Project
         protected override void OnInitialized()
         {
             InitializeComponent();
-            NavigationService.NavigateAsync("FavoritesPage");
+            NavigationService.NavigateAsync(new System.Uri("/CustomTabbedPage/ProfilePage", System.UriKind.Absolute));
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<FavoritesPage, FavoritesPageViewModel>();
+            containerRegistry.RegisterForNavigation<ProfilePage, ProfilePageViewModel>();
+            containerRegistry.RegisterForNavigation<CustomTabbedPage>();
         }
 
     }
