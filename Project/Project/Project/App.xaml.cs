@@ -23,6 +23,8 @@ namespace Project
         {
             containerRegistry.RegisterForNavigation<FavoritesPage, FavoritesPageViewModel>();
             containerRegistry.RegisterForNavigation<ProfilePage, ProfilePageViewModel>();
+            containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
+            containerRegistry.RegisterForNavigation<SearchPage, SearchPageViewModel>();
             containerRegistry.RegisterForNavigation<CustomTabbedPage>();
         }
 
