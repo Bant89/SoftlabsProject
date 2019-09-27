@@ -11,5 +11,6 @@
         <local:ProfilePage   />
         <local:LoginPage     />
         <local:SearchPage    />
+        <local:TrendingPage  />
     </TabbedPage.Children>
 </TabbedPage>

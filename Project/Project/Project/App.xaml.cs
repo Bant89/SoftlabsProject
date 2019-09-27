@@ -16,7 +16,7 @@ namespace Project
         protected override void OnInitialized()
         {
             InitializeComponent();
-            NavigationService.NavigateAsync(new System.Uri("/CustomTabbedPage/ProfilePage", System.UriKind.Absolute));
+            NavigationService.NavigateAsync(new System.Uri("/CustomTabbedPage", System.UriKind.Absolute));
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -26,6 +26,8 @@ namespace Project
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
             containerRegistry.RegisterForNavigation<SearchPage, SearchPageViewModel>();
             containerRegistry.RegisterForNavigation<CustomTabbedPage>();
+            containerRegistry.RegisterForNavigation<TrendingPage, TrendingPageViewModel>();
+            containerRegistry.RegisterForNavigation<VideoPage, VideoPageViewModel>();
         }
 
     }
