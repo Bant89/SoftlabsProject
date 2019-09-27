@@ -9,5 +9,7 @@
     <TabbedPage.Children>
         <local:FavoritesPage />
         <local:ProfilePage   />
+        <local:LoginPage     />
+        <local:SearchPage    />
     </TabbedPage.Children>
 </TabbedPage>
