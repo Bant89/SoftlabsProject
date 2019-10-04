@@ -7,11 +7,9 @@
             mc:Ignorable="d"
              x:Class="Project.Views.CustomTabbedPage">
     <TabbedPage.Children>
-        <local:HomePage />
-        <local:FavoritesPage />
-        <local:ProfilePage   />
-        <local:LoginPage     />
-        <local:SearchPage    />
-        <local:TrendingPage  />
+        <local:TrendingPage IconImageSource="Trending.png" />
+        <local:FavoritesPage IconImageSource="Favorite.png" />
+        <local:ProfilePage   IconImageSource="User.png"/>
+        <local:VideoPage    />
     </TabbedPage.Children>
 </TabbedPage>

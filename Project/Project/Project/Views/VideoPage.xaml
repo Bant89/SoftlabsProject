@@ -4,14 +4,92 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:mm="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
              x:Class="Project.Views.VideoPage"
              xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.forms"
-             mvvm:ViewModelLocator.AutowireViewModel="True">
+             mvvm:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding PageName}"
+             >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Video Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout>
+                <mm:VideoView 
+                          WidthRequest="320"
+                         HeightRequest="190"/>
+            <Button Text="Play"          
+                        BackgroundColor="#6441A4"
+                        TextColor="White"
+                    Command="{Binding PlayCommand}}"
+                       
+                />
+                <Button Text="Pause"      
+                        BackgroundColor="#6441A4"
+                        TextColor="White"
+                    Command="{Binding PauseCommand]}"
+                            />
+                <Button Text="Play from Pause"      
+                        BackgroundColor="#6441A4"
+                        TextColor="White"
+                    Command="{Binding PlayPauseCommand]}"
+                            />
+            <Button Text="Stop"      
+                        BackgroundColor="#6441A4"
+                        TextColor="White"
+                    Command="{Binding StopCommand]}"
+                            />
+        </StackLayout>
+            <StackLayout>
+                <!--<ListView ItemsSource="{Binding YoutubeItems}"
+                      HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label Text="{Binding ChannelTitle}"
+                                   TextColor="White"
+                                       FontSize ="22"
+                                       />
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="View count:"
+                                       TextColor="White"
+                                       FontSize="20"
+                                       />
+                                        <Label Text="{Binding ViewCount}"
+                                        TextColor="#0D47A1"
+                                        FontSize="20"
+                                       />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Label Text="Likes:"
+                                       TextColor="White"
+                                       FontSize="20"/>
+                                        <Label Text="{Binding LikeCount}"
+                                        TextColor="Green"
+                                        FontSize="20"
+                                       />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Dislikes:"
+                                       TextColor="White"
+                                       FontSize="20"/>
+                                        <Label Text="{Binding DislikeCount}"
+                                         TextColor="Red"
+                                         FontSize="20"
+                                       />
+                                    </StackLayout>
+                                    <Label Text="Video Description: "
+                                   TextColor="White"/>
+                                    <Label Text="{Binding Description}"
+                                    TextColor="White"
+                                    FontSize="20"
+                                       />
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

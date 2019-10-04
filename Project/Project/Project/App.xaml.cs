@@ -21,7 +21,6 @@ namespace Project
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
             containerRegistry.RegisterForNavigation<FavoritesPage, FavoritesPageViewModel>();
             containerRegistry.RegisterForNavigation<ProfilePage, ProfilePageViewModel>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
