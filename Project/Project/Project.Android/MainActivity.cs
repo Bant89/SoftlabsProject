@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using Prism;
 using Prism.Ioc;
+using MediaManager;
 
 namespace Project.Droid
 {
@@ -23,6 +24,7 @@ namespace Project.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            CrossMediaManager.Current.Init(this);
             LoadApplication(new App(new AndroidInitializer()));
         }
 
