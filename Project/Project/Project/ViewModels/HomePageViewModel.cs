@@ -4,7 +4,12 @@ using System.Text;
 
 namespace Project.ViewModels
 {
-    class HomePageViewModel
+    class HomePageViewModel: BaseViewModel
     {
+
+        public HomePageViewModel()
+        {
+            PageName = "Home Page";
+        }
     }
 }
