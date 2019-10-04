@@ -4,10 +4,13 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Project.Views.HomePage">
+             x:Class="Project.Views.HomePage"
+             xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.forms"
+             mvvm:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding PageName}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+              <Label Text="{Binding PageName}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
