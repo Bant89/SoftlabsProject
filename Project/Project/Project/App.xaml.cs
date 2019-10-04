@@ -1,6 +1,9 @@
-﻿using Prism;
+﻿using Plugin.Connectivity;
+using Plugin.Connectivity.Abstractions;
+using Prism;
 using Prism.Ioc;
 using Prism.Unity;
+using Project.Services;
 using Project.ViewModels;
 using Project.Views;
 using System;
@@ -11,6 +14,7 @@ namespace Project
 {
     public partial class App : PrismApplication
     {
+        static IApiService<IYoutubeApi> myApi = new ApiService<IYoutubeApi>(Config.ApiUrl);
         public App(IPlatformInitializer initializer = null) : base(initializer) { }
 
         protected override void OnInitialized()
@@ -21,6 +25,14 @@ namespace Project
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            // Registering instances
+            containerRegistry.RegisterInstance(myApi);
+            containerRegistry.RegisterInstance(CrossConnectivity.Current);
+
+            // Registering types
+            containerRegistry.RegisterSingleton<IApiManager, ApiManager>();
+
+
             containerRegistry.RegisterForNavigation<FavoritesPage, FavoritesPageViewModel>();
             containerRegistry.RegisterForNavigation<ProfilePage, ProfilePageViewModel>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
