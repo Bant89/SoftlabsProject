@@ -20,6 +20,8 @@ namespace Project
         protected override void OnInitialized()
         {
             InitializeComponent();
+
+            System.Diagnostics.Debug.WriteLine("INICIALIZANDO CUSTOMTABBED");
             NavigationService.NavigateAsync(new System.Uri("/CustomTabbedPage", System.UriKind.Absolute));
         }
 

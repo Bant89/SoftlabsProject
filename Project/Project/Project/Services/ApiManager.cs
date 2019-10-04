@@ -48,6 +48,8 @@ namespace Project.Services
 
         public async Task<HttpResponseMessage> GetComments(string videoId = "2j3x0VYnehg")
         {
+
+            System.Diagnostics.Debug.WriteLine("CORRIENDO EN GET COMMENTS");
             var cts = new CancellationTokenSource();
             var task = RemoteRequestAsync(youtubeApi.GetApi(Fusillade.Priority.UserInitiated).GetGomments(videoId));
             runningTasks.Add(task.Id, cts);

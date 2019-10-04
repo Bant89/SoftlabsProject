@@ -28,6 +28,7 @@ namespace Project.ViewModels
 
         public async Task RunSafe(Task task, bool ShowLoading = true, string loadingMessage = null)
         {
+            System.Diagnostics.Debug.WriteLine("CORRIENDO EN BASE VIEW MODEL");
             try
             {
                 if (IsBusy) return;

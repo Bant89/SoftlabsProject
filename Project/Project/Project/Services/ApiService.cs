@@ -16,6 +16,8 @@ namespace Project.Services
 
 
         public ApiService(string apiBaseAddress){
+
+            System.Diagnostics.Debug.WriteLine("CORRIENDO EN API SERVICE");
             createClient = messageHandler =>
             {
                 var client = new HttpClient(messageHandler)
