@@ -9,84 +9,84 @@ namespace Project.Models
     {
 
         [JsonProperty("value")]
-        public string value { get; set; }
+        public string Value { get; set; }
     }
 
     public class Snippet
     {
 
         [JsonProperty("authorDisplayName")]
-        public string authorDisplayName { get; set; }
+        public string AuthorName { get; set; }
 
         [JsonProperty("authorProfileImageUrl")]
-        public string authorProfileImageUrl { get; set; }
+        public string AuthorProfileImage { get; set; }
 
         [JsonProperty("authorChannelUrl")]
-        public string authorChannelUrl { get; set; }
+        public string AuthorUrl { get; set; }
 
         [JsonProperty("authorChannelId")]
-        public AuthorChannelId authorChannelId { get; set; }
+        public AuthorChannelId AuthorChannelID { get; set; }
 
         [JsonProperty("videoId")]
-        public string videoId { get; set; }
+        public string VideoID { get; set; }
 
         [JsonProperty("textDisplay")]
-        public string textDisplay { get; set; }
+        public string TextDisplay { get; set; }
 
         [JsonProperty("textOriginal")]
-        public string textOriginal { get; set; }
+        public string TextOriginal { get; set; }
 
         [JsonProperty("canRate")]
-        public bool canRate { get; set; }
+        public bool CanRate { get; set; }
 
         [JsonProperty("viewerRating")]
-        public string viewerRating { get; set; }
+        public string ViewerRating { get; set; }
 
         [JsonProperty("likeCount")]
-        public int likeCount { get; set; }
+        public int LikesAmount { get; set; }
 
         [JsonProperty("publishedAt")]
-        public DateTime publishedAt { get; set; }
+        public DateTime PublishedDate { get; set; }
 
         [JsonProperty("updatedAt")]
-        public DateTime updatedAt { get; set; }
+        public DateTime UpdatedDate { get; set; }
     }
 
     public class TopLevelComment
     {
 
         [JsonProperty("kind")]
-        public string kind { get; set; }
+        public string Kind { get; set; }
 
         [JsonProperty("etag")]
-        public string etag { get; set; }
+        public string Etag { get; set; }
 
         [JsonProperty("id")]
-        public string id { get; set; }
+        public string ID { get; set; }
 
         [JsonProperty("snippet")]
         public Snippet Snippet { get; set; }
     }
 
-    public class snip
+    public class Snip
     {
 
         [JsonProperty("topLevelComment")]
-        public TopLevelComment topLevelComment { get; set; }
+        public TopLevelComment Top { get; set; }
     }
 
     public class Item
     {
 
         [JsonProperty("snippet")]
-        public snip snip { get; set; }
+        public Snip Snip { get; set; }
     }
 
     public class Comment
     {
 
         [JsonProperty("items")]
-        public IList<Item> items { get; set; }
+        public IList<Item> Items { get; set; }
     }
 
 

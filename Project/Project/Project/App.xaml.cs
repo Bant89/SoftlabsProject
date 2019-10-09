@@ -1,28 +1,24 @@
 ﻿using Plugin.Connectivity;
-using Plugin.Connectivity.Abstractions;
 using Prism;
 using Prism.Ioc;
 using Prism.Unity;
 using Project.Services;
 using Project.ViewModels;
 using Project.Views;
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Project
 {
     public partial class App : PrismApplication
     {
-        static IApiService<IYoutubeApi> myApi = new ApiService<IYoutubeApi>(Config.ApiUrl);
+        public static IApiService<IYoutubeApi> myApi = new ApiService<IYoutubeApi>(Config.ApiUrl);
         public App(IPlatformInitializer initializer = null) : base(initializer) { }
 
         protected override void OnInitialized()
         {
             InitializeComponent();
 
-            System.Diagnostics.Debug.WriteLine("INICIALIZANDO CUSTOMTABBED");
-            NavigationService.NavigateAsync(new System.Uri("/CustomTabbedPage", System.UriKind.Absolute));
+            //NavigationService.NavigateAsync(new System.Uri(Utils.NavigationConstants.MainPage, System.UriKind.Absolute));
+            NavigationService.NavigateAsync(new System.Uri("/NavigationPage/CustomTabbedPage?selectedTab=FavoritesPage", System.UriKind.Absolute));
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -35,11 +31,11 @@ namespace Project
             containerRegistry.RegisterSingleton<IApiManager, ApiManager>();
 
 
+            containerRegistry.RegisterForNavigation<CustomTabbedPage>();
             containerRegistry.RegisterForNavigation<FavoritesPage, FavoritesPageViewModel>();
             containerRegistry.RegisterForNavigation<ProfilePage, ProfilePageViewModel>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
             containerRegistry.RegisterForNavigation<SearchPage, SearchPageViewModel>();
-            containerRegistry.RegisterForNavigation<CustomTabbedPage>();
             containerRegistry.RegisterForNavigation<TrendingPage, TrendingPageViewModel>();
             containerRegistry.RegisterForNavigation<VideoPage, VideoPageViewModel>();
         }

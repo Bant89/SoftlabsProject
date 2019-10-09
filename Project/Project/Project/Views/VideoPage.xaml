@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Project.Views.VideoPage"
-             xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.forms"
+             xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              mvvm:ViewModelLocator.AutowireViewModel="True">
     <ContentPage.Content>
         <StackLayout>
