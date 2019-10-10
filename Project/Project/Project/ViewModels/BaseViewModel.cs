@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Project.ViewModels
 {
-    public class BaseViewModel : BindableBase //, IPageLifecycleAware
+    public class BaseViewModel : BindableBase 
     {
         private string _PageName;
         public string PageName

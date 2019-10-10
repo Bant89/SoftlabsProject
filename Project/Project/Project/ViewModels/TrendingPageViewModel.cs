@@ -1,13 +1,8 @@
 ﻿using Prism.AppModel;
-using Prism.Ioc;
 using Project.Models;
 using Project.Services;
-using Project.Views;
 using Refit;
-using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Project.ViewModels

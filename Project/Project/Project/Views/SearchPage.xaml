@@ -13,6 +13,10 @@
             <Label Text="{Binding PageName}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Button Command="{Binding SearchCommand}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                    Text="Search"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

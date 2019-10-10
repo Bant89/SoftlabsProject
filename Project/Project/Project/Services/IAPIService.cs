@@ -9,6 +9,6 @@ namespace Project.Services
     {
         Task<VideoResponse> GetTrendingVideos();
 
-
+        Task<VideoSearchResponse> GetSearchVideos();
     }
 }
