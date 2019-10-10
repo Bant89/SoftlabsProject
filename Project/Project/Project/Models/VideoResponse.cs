@@ -190,6 +190,13 @@ namespace Project.Models
         public string CommentCount { get; set; }
     }
 
+    public class Player
+    {
+
+        [JsonProperty("embedHtml")]
+        public string EmbedHtml { get; set; }
+    }
+
     public class VideoItem
     {
 
@@ -210,6 +217,9 @@ namespace Project.Models
 
         [JsonProperty("statistics")]
         public Statistics Statistics { get; set; }
+
+        [JsonProperty("player")]
+        public Player Player { get; set; }
     }
 
     public class VideoResponse

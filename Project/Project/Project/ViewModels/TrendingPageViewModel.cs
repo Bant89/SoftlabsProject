@@ -16,6 +16,9 @@ namespace Project.ViewModels
     {
         public List<VideoItem> MusicVideos { get; set; }
         public List<VideoItem> TechVideos { get; set; }
+        public List<VideoItem> FilmVideos { get; set; }
+        public List<VideoItem> AnimalsVideos { get; set; }
+        public List<VideoItem> SportsVideos { get; set; }
         public TrendingPageViewModel()
         {
              PageName = "Trending Page";
@@ -29,7 +32,20 @@ namespace Project.ViewModels
         public async Task GetTrendingVideos()
         {
             var apiResponse = RestService.For<IYoutubeAPI>("https://www.googleapis.com/youtube/v3");
-            var videos = await apiResponse.GetTrendingVideos();
+            VideoResponse videos = await apiResponse.GetTrendingVideos(Constants.VideoCategories.Music,Constants.APIKey);
+            MusicVideos = new List<VideoItem>(videos.Items);
+
+             videos = await apiResponse.GetTrendingVideos(Constants.VideoCategories.Technology, Constants.APIKey);
+            TechVideos = new List<VideoItem>(videos.Items);
+
+             videos = await apiResponse.GetTrendingVideos(Constants.VideoCategories.Film, Constants.APIKey);
+            FilmVideos = new List<VideoItem>(videos.Items);
+
+             videos = await apiResponse.GetTrendingVideos(Constants.VideoCategories.Animals, Constants.APIKey);
+            AnimalsVideos = new List<VideoItem>(videos.Items);
+
+            videos = await apiResponse.GetTrendingVideos(Constants.VideoCategories.Sports, Constants.APIKey);
+            SportsVideos = new List<VideoItem>(videos.Items);
             System.Diagnostics.Debug.Write("Probando");
         }
 
