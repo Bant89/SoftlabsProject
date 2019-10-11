@@ -9,14 +9,81 @@
              mvvm:ViewModelLocator.AutowireViewModel="True"
              Title="{Binding PageName}">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="{Binding PageName}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Button Command="{Binding SearchCommand}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" 
-                    Text="Search"/>
-        </StackLayout>
+        <StackLayout BackgroundColor="#1f1f1f">
+        <Grid RowSpacing="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+                <StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="#3e3e3e">
+
+                    <Image Source="jellylogo"/>
+                    <Label Text="SoftLabs" FontSize="32" />
+
+                </StackLayout>
+                    
+            
+            <!--<Label Text="Video" Grid.Row="1" BackgroundColor="Blue" VerticalOptions="CenterAndExpand" 
+                   TextColor="White" HorizontalOptions="CenterAndExpand" />-->
+                <Image Source="preview" Grid.Row="1" />
+
+
+                <StackLayout Orientation="Vertical" Grid.Row="2">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Title" />
+                        <Label Text="# views" HorizontalOptions="EndAndExpand"  FontSize="Medium" />
+                    </StackLayout>
+                    <Label Text="Channel" FontSize="Medium" />
+                    <Label Text="Description of the video" FontSize="Medium" />
+                </StackLayout>
+
+                <!--<StackLayout Orientation="Vertical" Grid.Row="2">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding title}" />
+                                        <Label Text="{Binding views}" HorizontalOptions="EndAndExpand" FontSize="Medium" />
+                                    </StackLayout>
+                                    <Label Text="{Binding channel}"  FontSize="Medium" />
+                                    <Label Text="{Binding description}" FontSize="Medium" />
+                </StackLayout>-->
+
+
+                <StackLayout Grid.Row="3">
+                    <Label Text="Comments" />
+                </StackLayout>
+           
+
+                
+                    <StackLayout Orientation="Horizontal" Grid.Row="4">
+                        <Image Source="logo" HeightRequest="75" />
+                    <StackLayout  Orientation="Vertical">
+                        <Label Text="Account" />
+                        <Label Text="Comment" FontSize="Medium" />
+                    </StackLayout>
+                </StackLayout>
+
+                <!--<ListView  x:Name="Commentlist" Grid.Row="4">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                               <StackLayout Orientation="Horizontal">
+                        <Image Source="{Binding Logo}" HeightRequest="75" />
+                    <StackLayout  Orientation="Vertical">
+                        <Label Text="{Binding Account}"  />
+                        <Label Text="{Binding Comment}" FontSize="Medium" />
+                    </StackLayout>
+                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+
+            </Grid>
     </ContentPage.Content>
 </ContentPage>
