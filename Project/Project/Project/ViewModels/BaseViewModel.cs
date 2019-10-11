@@ -1,16 +1,12 @@
-﻿using Prism.AppModel;
-using Prism.Mvvm;
-using Project.Services;
-using Refit;
+﻿using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Project.ViewModels
 {
-    public class BaseViewModel : BindableBase 
+    public class BaseViewModel : BindableBase
     {
         private string _PageName;
         public string PageName
@@ -18,6 +14,7 @@ namespace Project.ViewModels
             get { return _PageName; }
             set { SetProperty(ref _PageName, value); }
         }
+
 
     }
 }
