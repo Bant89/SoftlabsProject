@@ -10,9 +10,42 @@
              Title="{Binding PageName}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{Binding PageName}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+           <Grid RowSpacing="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Orientation="Horizontal" Grid.Row="0">
+
+                    <Image Source="jellylogo"/>
+                    <Entry Placeholder="Search" Text="{Binding Search}" WidthRequest="210" />
+                    <Image Source="search" HorizontalOptions="EndAndExpand" />
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Orientation="Horizontal">
+                    <Image Source="preview" HeightRequest="100"/>
+                    <Label Text="Titulo" VerticalOptions="Center" />
+                </StackLayout>
+                
+                <!--<ListView  x:Name="listVideo" Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical">
+                                    <Image Source="{Binding Thumbnail}" />
+                                    <Label Text="{Binding Title}" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
