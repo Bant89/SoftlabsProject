@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Project.ViewModels
 {
-    class VideoPageViewModel
+    public class VideoPageViewModel : BaseViewModel
     {
+        public VideoPageViewModel()
+        {                     
+
+        }
     }
 }

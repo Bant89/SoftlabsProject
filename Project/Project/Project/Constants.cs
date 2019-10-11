@@ -10,8 +10,8 @@ namespace Project
         {
         }
 
-        public static string APIKey { get; set; } = "ENTER YOUR API KEY HERE";
-
+        public static string APIKey { get; set; } = "Enter Api key";
+        public static string BaseUrlVideo { get; set; } = "https://www.youtube.com/embed/";
         public static class VideoCategories
         {
             public static string Technology { get; set; } = "28";

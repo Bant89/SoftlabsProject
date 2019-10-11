@@ -10,13 +10,33 @@
              Title="{Binding PageName}">
     <ContentPage.Content>
         <StackLayout>
+
             <Label Text="{Binding PageName}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                />
+            <Entry x:Name="SearchEntry"
+                    Placeholder="Search Videos by name"                  
+                   />
             <Button Command="{Binding SearchCommand}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" 
+                
                     Text="Search"/>
+            <ListView ItemsSource="{Binding VideoSearchResults}"
+                                HasUnevenRows="True"
+                                x:Name="SearchList" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="15,20,15,20">
+                                <Image Source="https://i.ytimg.com/vi/pbMwTqkKSps/hqdefault.jpg" WidthRequest="200" HeightRequest="200"/>
+                                <Label Text="{Binding Snippet.Title}" TextColor="Black" Margin="0,5,0,0" FontSize="15"/>
+                                <Label Text="{Binding Snippet.ChannelTitle}" Margin="0,-5,0,0" TextColor="#767676" FontSize="13"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Snippet.Description}" TextColor="#767676" FontSize="13"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
