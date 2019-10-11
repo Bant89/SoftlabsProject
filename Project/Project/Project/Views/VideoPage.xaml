@@ -8,10 +8,10 @@
              xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.forms"
              mvvm:ViewModelLocator.AutowireViewModel="True">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Video Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <WebView
+            x:Name="webView" WidthRequest="1000" HeightRequest="1000"
+
+            Source="{Binding Url}">
+        </WebView>
     </ContentPage.Content>
 </ContentPage>

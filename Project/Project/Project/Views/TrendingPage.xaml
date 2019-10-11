@@ -9,10 +9,28 @@
              mvvm:ViewModelLocator.AutowireViewModel="True"
              Title="{Binding PageName}">
     <ContentPage.Content>
+
         <StackLayout>
-            <Label Text="{Binding PageName}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <ListView ItemsSource="{Binding ToDisplayVideos}"
+                                HasUnevenRows="True"
+                                x:Name="SearchList" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="15,20,15,20">
+                                <Image Source="{Binding Snippet.Thumbnails.High.Url}" Aspect="AspectFill"/>
+                                <Label Text="{Binding Snippet.Title}" TextColor="Black" Margin="0,5,0,0" FontSize="15"/>
+                                <Label Text="{Binding Snippet.ChannelTitle}" Margin="0,-5,0,0" TextColor="#767676" FontSize="13"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Snippet.Description}" TextColor="#767676" FontSize="13"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
         </StackLayout>
+       
     </ContentPage.Content>
 </ContentPage>
