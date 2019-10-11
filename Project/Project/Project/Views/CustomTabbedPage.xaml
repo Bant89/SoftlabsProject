@@ -7,9 +7,8 @@
             mc:Ignorable="d"
              x:Class="Project.Views.CustomTabbedPage">
     <TabbedPage.Children>
-        <local:FavoritesPage />
         <local:ProfilePage   />
-        <local:LoginPage     />
+        <local:FavoritesPage />
         <local:SearchPage    />
         <local:TrendingPage  />
     </TabbedPage.Children>
