@@ -11,11 +11,12 @@
         "dependencies": {
           "Fody": "6.0.0",
           "NETStandard.Library": "2.0.3",
-          "Plugin.MediaManager.Forms": "0.8.11",
+          "Newtonsoft.Json": "12.0.2",
           "Prism.Unity.Forms": "7.2.0.1367",
           "PropertyChanged.Fody": "3.1.3",
           "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.2.0.848062",
+          "Xamarin.Forms": "4.1.0.555618",
+          "Refit": "4.7.51",
           "System.Drawing.Common": "4.0.0.0"
         },
         "runtime": {
@@ -29,23 +30,11 @@
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
       },
-      "Plugin.MediaManager/0.8.11": {
+      "Newtonsoft.Json/12.0.2": {
         "runtime": {
-          "lib/netstandard2.0/MediaManager.dll": {
-            "assemblyVersion": "0.8.11.0",
-            "fileVersion": "0.8.11.0"
-          }
-        }
-      },
-      "Plugin.MediaManager.Forms/0.8.11": {
-        "dependencies": {
-          "Plugin.MediaManager": "0.8.11",
-          "Xamarin.Forms": "4.2.0.848062"
-        },
-        "runtime": {
-          "lib/netstandard2.0/MediaManager.Forms.dll": {
-            "assemblyVersion": "0.8.11.0",
-            "fileVersion": "0.8.11.0"
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2.23222"
           }
         }
       },
@@ -60,7 +49,7 @@
       "Prism.Forms/7.2.0.1367": {
         "dependencies": {
           "Prism.Core": "7.2.0.1367",
-          "Xamarin.Forms": "4.2.0.848062"
+          "Xamarin.Forms": "4.1.0.555618"
         },
         "runtime": {
           "lib/netstandard2.0/Prism.Forms.dll": {
@@ -90,6 +79,17 @@
           "lib/netstandard1.0/PropertyChanged.dll": {
             "assemblyVersion": "3.1.3.0",
             "fileVersion": "3.1.3.0"
+          }
+        }
+      },
+      "Refit/4.7.51": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Refit.dll": {
+            "assemblyVersion": "4.7.0.0",
+            "fileVersion": "4.7.51.16696"
           }
         }
       },
@@ -140,19 +140,19 @@
           }
         }
       },
-      "Xamarin.Forms/4.2.0.848062": {
+      "Xamarin.Forms/4.1.0.555618": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.2.0.122"
+            "fileVersion": "4.1.0.267"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.2.0.122"
+            "fileVersion": "4.1.0.267"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.2.0.122"
+            "fileVersion": "4.1.0.267"
           }
         }
       },
@@ -193,19 +193,12 @@
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
-    "Plugin.MediaManager/0.8.11": {
+    "Newtonsoft.Json/12.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-X0Zi49UIu93EePMVCVKDtU955mX7LFed1N+kmn/BnMsO98G48UCnqz2UzOzcV4Qdp85hfAzA1PPlWmIbLgaUzQ==",
-      "path": "plugin.mediamanager/0.8.11",
-      "hashPath": "plugin.mediamanager.0.8.11.nupkg.sha512"
-    },
-    "Plugin.MediaManager.Forms/0.8.11": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-nURiL6Wssge1nh7SlV1WuV+O94j0iQ3/AMT23681S+NNP2RzyohjlahLS1R6wVSvnfv4wpBjTuwpXIGdXZ39ag==",
-      "path": "plugin.mediamanager.forms/0.8.11",
-      "hashPath": "plugin.mediamanager.forms.0.8.11.nupkg.sha512"
+      "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "path": "newtonsoft.json/12.0.2",
+      "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
     },
     "Prism.Core/7.2.0.1367": {
       "type": "package",
@@ -234,6 +227,13 @@
       "sha512": "sha512-GaTTQdS8NCVMBrBGIu43XwyicIyD7iIp9zFLK57Q2kfba6BffMGt4bl0jwfkMysbdqUjP4oZcunvbQBauWieUQ==",
       "path": "propertychanged.fody/3.1.3",
       "hashPath": "propertychanged.fody.3.1.3.nupkg.sha512"
+    },
+    "Refit/4.7.51": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQ6CBA18lvFPCGAy9c9lLSkDpGSCJhTgH5IpeiUpvrkPVOJ4ROSKwej26ulFEwYQSEIkjC3ESZ/KGHe3WbK28g==",
+      "path": "refit/4.7.51",
+      "hashPath": "refit.4.7.51.nupkg.sha512"
     },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",
@@ -270,12 +270,12 @@
       "path": "xamarin.essentials/1.1.0",
       "hashPath": "xamarin.essentials.1.1.0.nupkg.sha512"
     },
-    "Xamarin.Forms/4.2.0.848062": {
+    "Xamarin.Forms/4.1.0.555618": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/JIC5p3M9h0MdSg+uH3Hy260YIWkXrQA8m4yO/3TQhSSIe+FNwyPi0SkIomvikunWXu6rEJh/aDbFYEyks0mbw==",
-      "path": "xamarin.forms/4.2.0.848062",
-      "hashPath": "xamarin.forms.4.2.0.848062.nupkg.sha512"
+      "sha512": "sha512-eZHy/yCrKhu3WUI1oszz8Hvq8iC+wQyokEVkzlSmNJD6xa2pGLq5UjOgpXEWu7zKPaoZ5c70SrTv1BBZE+Je1A==",
+      "path": "xamarin.forms/4.1.0.555618",
+      "hashPath": "xamarin.forms.4.1.0.555618.nupkg.sha512"
     },
     "System.Drawing.Common/4.0.0.0": {
       "type": "reference",

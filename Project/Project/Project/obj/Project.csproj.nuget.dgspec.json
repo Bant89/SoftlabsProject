@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Emilio Escano\\source\\repos\\SoftlabsProject-master\\Project\\Project\\Project\\Project.csproj": {}
+    "C:\\Electiva Mobile\\SoftlabsProject\\Project\\Project\\Project\\Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Emilio Escano\\source\\repos\\SoftlabsProject-master\\Project\\Project\\Project\\Project.csproj": {
+    "C:\\Electiva Mobile\\SoftlabsProject\\Project\\Project\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Emilio Escano\\source\\repos\\SoftlabsProject-master\\Project\\Project\\Project\\Project.csproj",
+        "projectUniqueName": "C:\\Electiva Mobile\\SoftlabsProject\\Project\\Project\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "C:\\Users\\Emilio Escano\\source\\repos\\SoftlabsProject-master\\Project\\Project\\Project\\Project.csproj",
-        "packagesPath": "C:\\Users\\Emilio Escano\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Emilio Escano\\source\\repos\\SoftlabsProject-master\\Project\\Project\\Project\\obj\\",
+        "projectPath": "C:\\Electiva Mobile\\SoftlabsProject\\Project\\Project\\Project\\Project.csproj",
+        "packagesPath": "C:\\Users\\Francisco\\.nuget\\packages\\",
+        "outputPath": "C:\\Electiva Mobile\\SoftlabsProject\\Project\\Project\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Emilio Escano\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Francisco\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -55,9 +55,9 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
-            "Plugin.MediaManager.Forms": {
+            "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[0.8.11, )"
+              "version": "[12.0.2, )"
             },
             "Prism.Unity.Forms": {
               "target": "Package",
@@ -73,7 +73,11 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.2.0.848062, )"
+              "version": "[4.1.0.555618, )"
+            },
+            "refit": {
+              "target": "Package",
+              "version": "[4.7.51, )"
             }
           },
           "imports": [
