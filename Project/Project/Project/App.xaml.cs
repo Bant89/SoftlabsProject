@@ -16,14 +16,11 @@ namespace Project
         protected override void OnInitialized()
         {
             InitializeComponent();
-            NavigationService.NavigateAsync(new System.Uri("/CustomTabbedPage", System.UriKind.Absolute));
+            NavigationService.NavigateAsync(new System.Uri(Constants.Navigation.ToTabbedPage, System.UriKind.Absolute));
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<FavoritesPage, FavoritesPageViewModel>();
-            containerRegistry.RegisterForNavigation<ProfilePage, ProfilePageViewModel>();
-            containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
             containerRegistry.RegisterForNavigation<SearchPage, SearchPageViewModel>();
             containerRegistry.RegisterForNavigation<CustomTabbedPage>();
             containerRegistry.RegisterForNavigation<TrendingPage, TrendingPageViewModel>();

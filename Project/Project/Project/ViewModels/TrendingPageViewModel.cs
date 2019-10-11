@@ -1,14 +1,17 @@
 ﻿using Prism.AppModel;
+using Prism.Navigation;
 using Project.Models;
 using Project.Services;
 using Refit;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
 namespace Project.ViewModels
 {
-    class TrendingPageViewModel : BaseViewModel, IPageLifecycleAware
+    class TrendingPageViewModel : BaseViewModel, IPageLifecycleAware, INotifyPropertyChanged
     {
         public List<VideoItem> MusicVideos { get; set; }
         public List<VideoItem> TechVideos { get; set; }
@@ -16,11 +19,40 @@ namespace Project.ViewModels
         public List<VideoItem> AnimalsVideos { get; set; }
         public List<VideoItem> SportsVideos { get; set; }
         public List<VideoItem> ToDisplayVideos { get; set; }
+        private INavigationService _navigationService;
+        private VideoItem getID;
+        public VideoItem VideoGetID
+        {
+            get => getID;
+            set
+            {
+                getID = value;
+                if (getID == null)
+                {
+                    return;
+                }
+                SelectedID(getID);
+                VideoGetID = null;
+                OnPropertyChanged();
+            }
+        }
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
-        public TrendingPageViewModel()
+        private async void SelectedID(VideoItem ID)
+        {
+            string _videoID = ID.Id;
+            var navigationparams = new NavigationParameters();
+            navigationparams.Add("videoId", _videoID);
+            await _navigationService.NavigateAsync(new Uri(Constants.Navigation.ToVideoPage, UriKind.Relative), navigationparams);
+        }
+        public TrendingPageViewModel(INavigationService navigationService)
         {
              PageName = "Trending Page";
-            
+            _navigationService = navigationService;
         }
 
         public async void OnAppearing()
@@ -31,7 +63,7 @@ namespace Project.ViewModels
         public async Task GetTrendingVideos()
         {
             Random random = new Random();
-            var apiResponse = RestService.For<IYoutubeAPI>("https://www.googleapis.com/youtube/v3");
+            var apiResponse = RestService.For<IYoutubeAPI>(Constants.BaseApi);
             VideoResponse videos = await apiResponse.GetTrendingVideos(Constants.VideoCategories.Music,Constants.APIKey);
             MusicVideos = new List<VideoItem>(videos.Items);
 
@@ -57,12 +89,12 @@ namespace Project.ViewModels
 
             this.ToDisplayVideos = GetToDisplay;
 
-            System.Diagnostics.Debug.Write("Probando");
+            
         }
 
         public void OnDisappearing()
         {
-            System.Diagnostics.Debug.WriteLine("Just to stop throwing exceptions");
+            
         }
         
     }

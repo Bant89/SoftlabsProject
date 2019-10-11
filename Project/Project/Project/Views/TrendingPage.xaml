@@ -31,6 +31,7 @@
                 <ListView ItemsSource="{Binding ToDisplayVideos}"
                                 HasUnevenRows="True"
                                 x:Name="SearchList" 
+                              SelectedItem="{Binding VideoGetID, Mode=TwoWay}"
                                 Grid.Row="1">
                     <ListView.ItemTemplate>
                         <DataTemplate>

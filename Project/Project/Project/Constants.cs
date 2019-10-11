@@ -8,10 +8,13 @@ namespace Project
     {
         public static class Navigation
         {
+            public static string ToVideoPage { get; set; } = "/VideoPage";
+            public static string ToTabbedPage { get; set; } = "/CustomTabbedPage";
         }
 
-        public static string APIKey { get; set; } = "AIzaSyDzamBbz3GTZ_TdOnrU-lKkI4QioVKW1-U";
+        public static string APIKey { get; set; } = "AIzaSyDb0fEgyMvxmhIJO8kzR6AuOPcQak45ees";
         public static string BaseUrlVideo { get; set; } = "https://www.youtube.com/embed/";
+        public static string BaseApi { get; set; } ="https://www.googleapis.com/youtube/v3";
         public static class VideoCategories
         {
             public static string Technology { get; set; } = "28";

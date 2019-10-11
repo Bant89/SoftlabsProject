@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="Project.Views.SearchPage"
              xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.forms"
+             xmlns:local1="clr-namespace:Project.Effects"
              mvvm:ViewModelLocator.AutowireViewModel="True"
              Title="{Binding PageName}">
     <ContentPage.Content>
@@ -33,20 +34,24 @@
                 <Entry x:Name="SearchEntry"
                    Text="{Binding Search.WordsForSearch, Mode=TwoWay}"
                        PlaceholderColor="White"
-                   Placeholder="Search!" Grid.Row="1" TextColor="White"
-                   />
+                   Placeholder="Search!" Grid.Row="1" TextColor="White">
+                    <Entry.Effects>
+                        <local1:FocusEffect/>
+                    </Entry.Effects>
+                </Entry>
                 <Button Command="{Binding SearchCommand}"
                     Text="Search"  Grid.Row="2"
                     />
                 <ListView ItemsSource="{Binding VideosResults}"
                                 HasUnevenRows="True"
                                 x:Name="SearchList" 
+                          SelectedItem="{Binding VideoGetID, Mode=TwoWay}"
                                 Grid.Row="3">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Orientation="Vertical" Padding="15,20,15,20">
-                                    <Image Source="https://i.ytimg.com/vi/pbMwTqkKSps/hqdefault.jpg" Aspect="AspectFill"/>
+                                    <Image Source="{Binding Snippet.Thumbnails.High.Url}" Aspect="AspectFill"/>
                                     <Label Text="{Binding Snippet.Title}" Margin="0,5,0,0" FontSize="20" FontAttributes="Bold"/>
                                     <Label Text="{Binding Snippet.ChannelTitle}" Margin="0,-5,0,0" TextColor="#767676" FontSize="13"/>
                                     <StackLayout Orientation="Horizontal">
