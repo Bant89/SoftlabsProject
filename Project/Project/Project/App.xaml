@@ -6,5 +6,20 @@
              mc:Ignorable="d"
              x:Class="Project.App"
              xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms">
-    
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="Sans-serif"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+            <Style TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="#282828"/>
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+
 </prism:PrismApplication>

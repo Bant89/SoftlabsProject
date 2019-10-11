@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Project
+namespace Project.Services
 {
-    public static class Config
+    class APIService
     {
     }
 }

@@ -5,11 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             xmlns:local="clr-namespace:Project.Views"
             mc:Ignorable="d"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
              x:Class="Project.Views.CustomTabbedPage">
     <TabbedPage.Children>
-        <local:TrendingPage IconImageSource="Trending.png" />
-        <local:FavoritesPage IconImageSource="Favorite.png" />
-        <local:ProfilePage   IconImageSource="User.png"/>
-        <local:VideoPage    />
+        <local:TrendingPage IconImageSource="light.png" />
+        <local:SearchPage   IconImageSource="search.png" />
     </TabbedPage.Children>
 </TabbedPage>
