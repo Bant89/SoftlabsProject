@@ -8,10 +8,29 @@
              xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.forms"
              mvvm:ViewModelLocator.AutowireViewModel="True">
     <ContentPage.Content>
-        <WebView
+
+        <Grid RowSpacing="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="#3e3e3e">
+
+                <Image Source="jellylogo"/>
+                <Label Text="SoftLabs" FontSize="32" />
+
+            </StackLayout>
+
+            <WebView
             x:Name="webView" WidthRequest="1000" HeightRequest="1000"
 
-            Source="{Binding Url}">
-        </WebView>
+            Source="{Binding Url}" Grid.Row="1">
+            </WebView>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
