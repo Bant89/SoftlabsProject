@@ -9,9 +9,7 @@
             android:TabbedPage.ToolbarPlacement="Bottom"
              x:Class="Project.Views.CustomTabbedPage">
     <TabbedPage.Children>
-        <local:ProfilePage   />
-        <local:FavoritesPage />
-        <local:SearchPage    />
-        <local:TrendingPage  />
+        <local:SearchPage  IconImageSource="search"  />
+        <local:TrendingPage IconImageSource="lightning" />
     </TabbedPage.Children>
 </TabbedPage>
