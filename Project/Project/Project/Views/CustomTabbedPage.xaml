@@ -9,7 +9,7 @@
             android:TabbedPage.ToolbarPlacement="Bottom"
              x:Class="Project.Views.CustomTabbedPage">
     <TabbedPage.Children>
-        <local:SearchPage  IconImageSource="search"  />
-        <local:TrendingPage IconImageSource="lightning" />
+        <local:SearchPage  IconImageSource="search" Title="Search" />
+        <local:TrendingPage IconImageSource="lightning" Title="Trending" />
     </TabbedPage.Children>
 </TabbedPage>
