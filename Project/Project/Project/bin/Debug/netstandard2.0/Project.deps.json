@@ -1,0 +1,286 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "Project/1.0.0": {
+        "dependencies": {
+          "Fody": "6.0.0",
+          "NETStandard.Library": "2.0.3",
+          "Plugin.MediaManager.Forms": "0.8.11",
+          "Prism.Unity.Forms": "7.2.0.1367",
+          "PropertyChanged.Fody": "3.1.3",
+          "Xamarin.Essentials": "1.1.0",
+          "Xamarin.Forms": "4.2.0.848062",
+          "System.Drawing.Common": "4.0.0.0"
+        },
+        "runtime": {
+          "Project.dll": {}
+        }
+      },
+      "Fody/6.0.0": {},
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Plugin.MediaManager/0.8.11": {
+        "runtime": {
+          "lib/netstandard2.0/MediaManager.dll": {
+            "assemblyVersion": "0.8.11.0",
+            "fileVersion": "0.8.11.0"
+          }
+        }
+      },
+      "Plugin.MediaManager.Forms/0.8.11": {
+        "dependencies": {
+          "Plugin.MediaManager": "0.8.11",
+          "Xamarin.Forms": "4.2.0.848062"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediaManager.Forms.dll": {
+            "assemblyVersion": "0.8.11.0",
+            "fileVersion": "0.8.11.0"
+          }
+        }
+      },
+      "Prism.Core/7.2.0.1367": {
+        "runtime": {
+          "lib/netstandard2.0/Prism.dll": {
+            "assemblyVersion": "7.2.0.1367",
+            "fileVersion": "7.2.0.1367"
+          }
+        }
+      },
+      "Prism.Forms/7.2.0.1367": {
+        "dependencies": {
+          "Prism.Core": "7.2.0.1367",
+          "Xamarin.Forms": "4.2.0.848062"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Prism.Forms.dll": {
+            "assemblyVersion": "7.2.0.1367",
+            "fileVersion": "7.2.0.1367"
+          }
+        }
+      },
+      "Prism.Unity.Forms/7.2.0.1367": {
+        "dependencies": {
+          "Prism.Forms": "7.2.0.1367",
+          "Unity.Container": "5.10.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Prism.Unity.Forms.dll": {
+            "assemblyVersion": "7.2.0.1367",
+            "fileVersion": "7.2.0.1367"
+          }
+        }
+      },
+      "PropertyChanged.Fody/3.1.3": {
+        "dependencies": {
+          "Fody": "6.0.0",
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/PropertyChanged.dll": {
+            "assemblyVersion": "3.1.3.0",
+            "fileVersion": "3.1.3.0"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Numerics.Vectors.dll": {
+            "assemblyVersion": "4.1.4.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.4.1",
+            "fileVersion": "4.6.26919.2"
+          }
+        }
+      },
+      "Unity.Abstractions/4.1.3": {
+        "runtime": {
+          "lib/netstandard2.0/Unity.Abstractions.dll": {
+            "assemblyVersion": "4.1.3.0",
+            "fileVersion": "4.1.3.0"
+          }
+        }
+      },
+      "Unity.Container/5.10.3": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
+          "Unity.Abstractions": "4.1.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Unity.Container.dll": {
+            "assemblyVersion": "5.10.3.0",
+            "fileVersion": "5.10.3.0"
+          }
+        }
+      },
+      "Xamarin.Essentials/1.1.0": {
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Essentials.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Forms/4.2.0.848062": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.2.0.122"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.2.0.122"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.2.0.122"
+          }
+        }
+      },
+      "System.Drawing.Common/4.0.0.0": {
+        "runtime": {
+          "System.Drawing.Common.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Project/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Fody/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rH9Q7GapghyLYESfeCUOqh0S70eLc3FAikIgEEyGeng3JJf1M7mt2BUxjz93o3ipDXLrKn1s69AIEolmnVn8xg==",
+      "path": "fody/6.0.0",
+      "hashPath": "fody.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Plugin.MediaManager/0.8.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-X0Zi49UIu93EePMVCVKDtU955mX7LFed1N+kmn/BnMsO98G48UCnqz2UzOzcV4Qdp85hfAzA1PPlWmIbLgaUzQ==",
+      "path": "plugin.mediamanager/0.8.11",
+      "hashPath": "plugin.mediamanager.0.8.11.nupkg.sha512"
+    },
+    "Plugin.MediaManager.Forms/0.8.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nURiL6Wssge1nh7SlV1WuV+O94j0iQ3/AMT23681S+NNP2RzyohjlahLS1R6wVSvnfv4wpBjTuwpXIGdXZ39ag==",
+      "path": "plugin.mediamanager.forms/0.8.11",
+      "hashPath": "plugin.mediamanager.forms.0.8.11.nupkg.sha512"
+    },
+    "Prism.Core/7.2.0.1367": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vrz2M/Hr9ItcAUvnT+n76ak6qPQMgJfyTYFSKqphveb9ibohm70vzc0cWu1jkeBY5XPS9RbUluXMa9WQGM0kPw==",
+      "path": "prism.core/7.2.0.1367",
+      "hashPath": "prism.core.7.2.0.1367.nupkg.sha512"
+    },
+    "Prism.Forms/7.2.0.1367": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zvYucENJ1HuArZU3sPSrwQobqoH80G4JcARMofl1MYpx3XJ4AZbS9DFNEF1taLCCpgsbsjWCARV190McDftFsg==",
+      "path": "prism.forms/7.2.0.1367",
+      "hashPath": "prism.forms.7.2.0.1367.nupkg.sha512"
+    },
+    "Prism.Unity.Forms/7.2.0.1367": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HG15TVwDDyTM0Zhd9sk/sFoQUqXr/oWNNa9jc8tgTPcDwnJE91L5tcVL5KozerlO/Kp/gyvr735j74TcBCrERA==",
+      "path": "prism.unity.forms/7.2.0.1367",
+      "hashPath": "prism.unity.forms.7.2.0.1367.nupkg.sha512"
+    },
+    "PropertyChanged.Fody/3.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GaTTQdS8NCVMBrBGIu43XwyicIyD7iIp9zFLK57Q2kfba6BffMGt4bl0jwfkMysbdqUjP4oZcunvbQBauWieUQ==",
+      "path": "propertychanged.fody/3.1.3",
+      "hashPath": "propertychanged.fody.3.1.3.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    },
+    "Unity.Abstractions/4.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Yar2QRlViMGI4Jeyr8qyjb02RvpBW15TOt//eMzESn3VO70v/tPj7XfKDvMnqC3QqFPkK4/7VeuK1mN9DexEiw==",
+      "path": "unity.abstractions/4.1.3",
+      "hashPath": "unity.abstractions.4.1.3.nupkg.sha512"
+    },
+    "Unity.Container/5.10.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JA18YN+6e60vEOBmrU+Rd3rJaTyRsxD1s4w66moS1BF8BEPw8jt6GjYFKo/SDUdGmbvTfJp/yThETy5nNkmJrg==",
+      "path": "unity.container/5.10.3",
+      "hashPath": "unity.container.5.10.3.nupkg.sha512"
+    },
+    "Xamarin.Essentials/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W0XOt1dNMAE2POcsVotoKDDy5FdAOnR0qULKl6WI4kQEMxQ1sp84DsSU5iacV7oQUMuPhUBAm/3ywks0HO1QrQ==",
+      "path": "xamarin.essentials/1.1.0",
+      "hashPath": "xamarin.essentials.1.1.0.nupkg.sha512"
+    },
+    "Xamarin.Forms/4.2.0.848062": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/JIC5p3M9h0MdSg+uH3Hy260YIWkXrQA8m4yO/3TQhSSIe+FNwyPi0SkIomvikunWXu6rEJh/aDbFYEyks0mbw==",
+      "path": "xamarin.forms/4.2.0.848062",
+      "hashPath": "xamarin.forms.4.2.0.848062.nupkg.sha512"
+    },
+    "System.Drawing.Common/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

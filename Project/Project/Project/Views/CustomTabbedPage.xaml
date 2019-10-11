@@ -11,6 +11,5 @@
     <TabbedPage.Children>
         <local:TrendingPage IconImageSource="light.png" />
         <local:SearchPage   IconImageSource="search.png" />
-     
     </TabbedPage.Children>
 </TabbedPage>
